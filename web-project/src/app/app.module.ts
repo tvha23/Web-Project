@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductItemComponent } from './product-list/product-item/product-item.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationBarComponent,
     ProductListComponent,
-    ProductItemComponent
+    ProductItemComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
