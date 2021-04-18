@@ -8,12 +8,19 @@ class Category(models.Model):
     name = models.CharField(max_length=255)
     # description = models.TextField() # Should we include this???
 
+    def __str__(self):
+        return self.name
+
 
 class ProductItem(models.Model):
     class Meta:
         verbose_name = 'Product Item'
         verbose_name_plural = 'Product Items'
+
     name = models.CharField(max_length=255)
     description = models.TextField()
     price = models.FloatField()
-    img=models.TextField()
+    img = models.TextField()
+
+    def __str__(self):
+        return self.name
