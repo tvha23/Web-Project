@@ -10,7 +10,7 @@ class CategorySerializer(serializers.Serializer):
 class ProductItemSerializer(serializers.Serializer):
     id=serializers.IntegerField(read_only=True)
     name = serializers.CharField()
-    description = serializers.TextField()
+    description = serializers.CharField()
     price = serializers.FloatField()
-    img=models.TextField()
+    img=serializers.CharField()
 
