@@ -7,6 +7,8 @@ import { NavigationBarComponent } from './components/navigation-bar/navigation-b
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductItemComponent } from './components/product-list/product-item/product-item.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CategoriesComponent } from './components/categories/categories.component';
+import { CategoryItemComponent } from './components/categories/category-item/category-item.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { FooterComponent } from './components/footer/footer.component';
     NavigationBarComponent,
     ProductListComponent,
     ProductItemComponent,
-    FooterComponent
+    FooterComponent,
+    CategoriesComponent,
+    CategoryItemComponent
   ],
   imports: [
     BrowserModule,
