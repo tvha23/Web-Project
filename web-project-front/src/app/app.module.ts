@@ -9,6 +9,8 @@ import { ProductItemComponent } from './components/product-list/product-item/pro
 import { FooterComponent } from './components/footer/footer.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { CategoryItemComponent } from './components/categories/category-item/category-item.component';
+import { RouterModule } from "@angular/router";
+import { CartComponent } from './components/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +20,14 @@ import { CategoryItemComponent } from './components/categories/category-item/cat
     ProductItemComponent,
     FooterComponent,
     CategoriesComponent,
-    CategoryItemComponent
+    CategoryItemComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
-  ],
+],
   providers: [],
   bootstrap: [AppComponent]
 })
