@@ -9,8 +9,13 @@ import { ProductItemComponent } from './components/product-list/product-item/pro
 import { FooterComponent } from './components/footer/footer.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { CategoryItemComponent } from './components/categories/category-item/category-item.component';
+<<<<<<< Updated upstream
 import { RouterModule } from "@angular/router";
 import { CartComponent } from './components/cart/cart.component';
+=======
+import { LoginComponent } from './components/login/login.component';
+import { SignupComponent } from './components/signup/signup.component';
+>>>>>>> Stashed changes
 
 @NgModule({
   declarations: [
@@ -21,7 +26,12 @@ import { CartComponent } from './components/cart/cart.component';
     FooterComponent,
     CategoriesComponent,
     CategoryItemComponent,
+<<<<<<< Updated upstream
     CartComponent
+=======
+    LoginComponent,
+    SignupComponent
+>>>>>>> Stashed changes
   ],
   imports: [
     BrowserModule,
