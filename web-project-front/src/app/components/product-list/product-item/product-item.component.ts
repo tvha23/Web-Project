@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ProductListComponent} from '../product-list.component'
 import { Product } from 'src/app/models';
 import { ProductItemService } from 'src/app/services/product-item.service';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-product-item',
   templateUrl: './product-item.component.html',
@@ -24,4 +24,9 @@ export class ProductItemComponent implements OnInit {
     }))
   }
 
+  title = 'appBootstrap';
+  
+  public isCollapsed = true;
+  
 }
+
