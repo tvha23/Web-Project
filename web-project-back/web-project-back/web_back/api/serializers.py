@@ -13,4 +13,5 @@ class ProductItemSerializer(serializers.Serializer):
     description = serializers.CharField()
     price = serializers.FloatField()
     img=serializers.CharField()
+    category = CategorySerializer() # Gotta google this(Serializing foreign key)
 

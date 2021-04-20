@@ -19,7 +19,7 @@ export class CategoryItemComponent implements OnInit {
 
   getCategories(){
     this.categoryService.getCategories().subscribe((data=>{
-      console.log(data);
+      // console.log(data);
     this.categories=data;
     }))
   }

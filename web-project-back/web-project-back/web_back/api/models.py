@@ -27,6 +27,6 @@ class ProductItem(models.Model):
     description = models.TextField()
     price = models.FloatField()
     img = models.TextField()
-
+    category = models.ForeignKey(Category, null=True, on_delete=models.SET_NULL, blank=True)
     def __str__(self):
         return self.name
