@@ -11,6 +11,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 export class ProductItemComponent implements OnInit {
 
   products:Product[]=[];
+  filteredProduct:Product[]=[];
   constructor(private productService:ProductItemService) { }
 
   ngOnInit(): void {
@@ -24,9 +25,13 @@ export class ProductItemComponent implements OnInit {
     }))
   }
 
-  title = 'appBootstrap';
+  // title = 'appBootstrap';
   
   public isCollapsed = true;
+
+  filterByCategory(){
+    
+  }
   
 }
 

@@ -9,12 +9,21 @@ from api.models import Category, ProductItem
 def category_list(request):
     if request.method == 'GET':
         categories = Category.objects.all()
-        serializer=CategorySerializer(categories, many=True)
+        serializer = CategorySerializer(categories, many=True)
         # categories_json = [category.to_json() for category in categories]
         return JsonResponse(serializer.data, safe=False)
 
+
 def product_list(request):
     if request.method == 'GET':
-        products=ProductItem.objects.all()
-        serializer=ProductItemSerializer(products, many=True)
+        products = ProductItem.objects.all()
+        serializer = ProductItemSerializer(products, many=True)
+    return JsonResponse(serializer.data, safe=False)
+
+
+def products_by_category(request, name):
+    if request.method == 'GET':
+        category = Category.objects.get(name=name)
+        products = category.productitem_set
+        serializer = ProductItemSerializer(products, many=True)
     return JsonResponse(serializer.data, safe=False)
