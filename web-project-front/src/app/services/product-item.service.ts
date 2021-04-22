@@ -12,7 +12,7 @@ export class ProductItemService {
 
   constructor(private http:HttpClient) { }
 
-  getProductItems():Observable<Product[]>{
-    return this.http.get<Product[]>(`${this.ROOT_URL}/api/products/`);
+  getProductItems(categoryName:string):Observable<Product[]>{
+    return this.http.get<Product[]>(`${this.ROOT_URL}/api/products/${categoryName}`);
   }
 }

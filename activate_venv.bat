@@ -1,0 +1,1 @@
+cd  web-project-back\web-project-back\Scripts  & activate

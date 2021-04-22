@@ -1,1 +1,24 @@
-<p>cart works!</p>
+<h3 style="position: relative; left: 40px;">Cart</h3>
+<div *ngIf="cartNotEmpty()">
+    <div style=" margin-left: 100px; margin-right: 1000px; position: relative;  top: 20px; border: 2px gray solid; border-radius: 10px; background-color:rgb(197, 230, 251)">
+        <div *ngFor="let item of products" style="border-top: 1px gray solid;">
+            <span style="font-size: 30px;">{{item.name}}</span><br>
+            <span>{{item.price | currency}}</span>
+        </div>
+    </div>
+</div>
+
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()" style="position: absolute; right: 200px; border: 2px gray solid; border-radius: 10px; padding: 20px;">
+    <div>
+      <input id="name" type="text" formControlName="name" placeholder="Name" style="width: 300px"/>
+    </div>
+  
+    <div>
+      <input id="address" type="text" formControlName="address" placeholder="Address" style="width: 300px;position: relative; top: 5px;" />
+    </div>
+  
+    <button class="m-3 btn btn-outline-primary" type="submit" style="position: relative; left:90px;">Purchase</button>
+  </form>
+
+  <!-- ~~~~~~~~~~~~~ADDED ORDER FORM -->
+<app-order-form ></app-order-form>
